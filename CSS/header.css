@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+a {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.upload {
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 150px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.out {
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sign {
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 125px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.log {
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+.pfp {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.idk {
+    margin-top: 15px;
+    float: right;
+    display: flex;
+}
+
+h3 {
+    background-color: white;
+    font-size: 40px;
+    margin-right: 30px;
+    margin-left: 20px;
+}
+
+.a {
+    background-color: white;
+}

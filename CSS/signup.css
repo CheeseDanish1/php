@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: arial;
+}
+
+body {
+    background: url("../images/bg1.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+
+.container {
+    border-top: 6px solid #40A4F4;
+    border-bottom: 6px solid #A740BD;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 635px;
+    height: 770px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, .5);
+    border-radius: 7px;
+    text-align: center;
+    background-color: white;
+}
+
+.container h1 {
+    font-size: 47px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.gender {
+    display: flex;
+    font-size: 20px;
+    margin-left: 150px;
+}
+
+.gender p {
+    margin-left: 27px;
+}
+
+input[type=password],
+input[type=text] {
+    padding: 0.8rem;
+    margin-top: 22px;
+    width: 75%;
+    height: 40px;
+    border-radius: 5px;
+    border: hidden;
+    background-color: #E3E3EF;
+    font-size: 30px;
+    color: #576577;
+}
+
+input:focus {
+    background-color: #AAA2A2;
+    color: #404B58;
+}
+
+input:focus::placeholder {
+    color: #404B58;
+}
+
+input::placeholder {
+    color: #8f8f8f;
+}
+
+button {
+    /*margin-top: 32px;*/
+    width: 30%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0072ff;
+    cursor: pointer;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.warning {
+    font-size: 40px;
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -93%);
+}
+
+#error {
+    color: red;
+}
+
+#success {
+    color: #039E03;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background: none;
+}
+
+#changePwdType {
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
