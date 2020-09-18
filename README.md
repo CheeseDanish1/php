@@ -3,7 +3,7 @@
 1. Install xampp [here](https://www.apachefriends.org/index.html)
 2. Open up the command terminal and cd to the folder named `C:/xampp/htdocs` (Default for windows)
 3. Delte Everything Currently In The Folder By Running The Command `rmdir /s /q .`
-4. Clone this repoooo inthe directory by running the command `git clone https://github.com/CheeseDanish1/Login-System-w-PHP.git`
+4. Clone this repoooo inthe directory by running the command `https://github.com/CheeseDanish1/php.git`
 5. Go to the install location and open the file named `xampp-control.exe`
 6. Start the modules called `Apache` and `MySQL`
 7. In your broser open up phpmyadmin by going to `localhost/phpmyadmin`
