@@ -85,7 +85,8 @@ else
             <br>
             <input type="password" id="pwd1" name="pwd" placeholder="Password"><br>
             <input type="password" id="pwd2" name="pwdcon" placeholder="Confirm Password"><br>
-            <p id="changePwdType" class="noselect" onclick="changeTwoTypes('pwd1', 'pwd2', 'changePwdType')">Show Passwords</p>
+            <p id="changePwdType" class="noselect" onclick="changeTwoTypes('pwd1', 'pwd2', 'changePwdType')">Show
+                Passwords</p>
             <button type="submit" name="submit"><b>Submit</b></button>
         </form>
     </div>

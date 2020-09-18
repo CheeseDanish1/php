@@ -7,18 +7,20 @@
 		header("Location: index");
 	}
 	?>
-<!DOCTYPE html>  
-<html> 
-<head>  
-	<title>Upload a Profile Picture</title>  
-	<link rel="stylesheet" href="CSS/upload.css">
-</head>  
-<body>  
-	<a href="index"><img class="arrow" src="images/arrow.svg"></a>
+<!DOCTYPE html>
+<html>
 
-	<div class="container"><br>
-		<h1>Upload A Profile Picture</h1><br><br>
-		<?php 
+<head>
+    <title>Upload a Profile Picture</title>
+    <link rel="stylesheet" href="CSS/upload.css">
+</head>
+
+<body>
+    <a href="index"><img class="arrow" src="images/arrow.svg"></a>
+
+    <div class="container"><br>
+        <h1>Upload A Profile Picture</h1><br><br>
+        <?php 
 	$sql = "SELECT * FROM users";
 	$result = mysqli_query($conn, $sql);
 	echo "<div>";
@@ -50,7 +52,7 @@
         echo "</div>";
 			
 	} ?><br />
-	<?php 
+        <?php 
 	if (isset($_GET['upload'])) {
 	$upload = $_GET['upload'];
 
@@ -72,6 +74,7 @@ if ($rowImg['status'] == 1) {
 	header("Location: index");
 }
 	 ?>
-	</div>
-</body> 
-</html>	
+    </div>
+</body>
+
+</html>

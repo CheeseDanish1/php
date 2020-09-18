@@ -25,7 +25,7 @@ CREATE TABLE profileimg (
   status int(11) not null
 );
 ```
-10. Again, in your browser go to localhost/php/
+10. Again, in your browser go to `localhost/php/`
 
 # Folders
 
