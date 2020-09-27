@@ -1,19 +1,20 @@
 <?php  
 	session_start();
-	require 'includes/dbh.inc.php';
+	require 'Includes/dbh.inc.php';
 	if (isset($_SESSION['userId'])) {
     $id = $_SESSION['userId'];
   }
   $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  //*
   if (strpos($actual_link, "header")) {
     include_once 'error-pages/404.html';
     //header("Location: index");
-  } else {
+  } else {//*/
     ?>
 <nav>
     <?php 
 	if (isset($_SESSION['userUid'])) {
-      echo '<form action="includes/logout.inc.php" method="POST">';
+      echo '<form action="Includes/logout.inc.php" method="POST">';
       echo '<button class="out" type="submit" name="logout">Log Out</button>';
       echo '</form>';
     } else {
@@ -38,7 +39,7 @@
           $fileActualExt = $fileExt[1];
           echo "  <img class='pfp' src='ProfileImages/".$id.".".$fileActualExt."?". mt_rand()."'>";
           echo "<h3>". $_SESSION['userName']. "</h3>";
-          echo '<form action="includes/delete.inc.php" method="post">
+          echo '<form action="Includes/delete.inc.php" method="post">
         <button name="delete" type="submit" class="upload">Delete Profile Image</button>
       </form>';
         } else {

@@ -1,5 +1,5 @@
 <?php
-  include_once 'includes/dbh.inc.php';
+  include_once 'Includes/dbh.inc.php';
   session_start();
 
   if (isset($_SESSION['userId'])) {
@@ -44,7 +44,7 @@
     <a href="index"><img class="img" src="images/arrow.svg" alt="backarow"></a>
     <div class="container">
         <h1>Log In</h1>
-        <form action="includes/login.inc.php" method="POST">
+        <form action="Includes/login.inc.php" method="POST">
             <br>
             <input type="text" name="uid-login" placeholder="User Name">
             <br><br>

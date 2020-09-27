@@ -130,26 +130,6 @@ if (isset($_POST['submit'])) {
   header("Location: ../signup?signup=error");
 }
 
-/*function nameize($str,$a_char = array("'","-"," ",".")){   
-    //$str contains the complete raw name string
-    //$a_char is an array containing the characters we use as separators for capitalization. If you don't pass anything, there are three in there as default.
-    $string = strtolower($str);
-    foreach ($a_char as $temp){
-        $pos = strpos($string,$temp);
-        if ($pos){
-            //we are in the loop because we found one of the special characters in the array, so lets split it up into chunks and capitalize each one.
-            $mend = '';
-            $a_split = explode($temp,$string);
-            foreach ($a_split as $temp2){
-                //capitalize each portion of the string which was separated at a special character
-                $mend .= ucfirst($temp2).$temp;
-                }
-            $string = substr($mend,0,-1);
-            }   
-        }
-    return ucfirst($string);
-    }*/
-
 function nameize($str, $a_char = array("'", "-", " ", ".")) {
   $string = strtolower($str);
   foreach ($a_char as $temp) {
@@ -183,9 +163,11 @@ function checkKeys($conn, $randStr) {
 }
 
 function generateKey($conn) {
-  $keylen = "12";
-  $str = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz$-_";
-  $randStr = substr(str_shuffle($str), 0, $keylen);
+  //$str = str_shuffle("1234567890ABCDEFG$-_$-_HIJKLMNOPQRSTUVWXYZabcdefgh$-_$-_ijklmnopqrstuvwxyz1234567890ABCDEF$-_$-_GHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz$-_$-_");
+  $keyLengs = array(12, 15, 16, 20);
+  $keylen = $keyLengs[rand(0,3)];
+  $str = md5(rand());
+  $randStr = substr($str, 0, $keylen);
 
   $checkKeys = checkKeys($conn, $randStr);
 

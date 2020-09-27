@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/dbh.inc.php';
+include_once 'Includes/dbh.inc.php';
 session_start();
 
 if (isset($_SESSION['userId']))
@@ -47,7 +47,7 @@ if (isset($_SESSION['userId']))
     <a href="index"><img class="img" src="images/arrow.svg" alt="backarow"></a>
     <div class="container">
         <h1>Sign up</h1>
-        <form action="includes/signup.inc.php" method="POST">
+        <form action="Includes/signup.inc.php" method="POST">
             <?php
 if (isset($_GET['first']))
 {

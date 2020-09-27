@@ -1,7 +1,7 @@
 <?php 
 	session_start();
-	$conn = mysqli_connect("localhost", "root", "", "loginsystem"); $id =
-	$_SESSION['userId'];
+  require_once 'Includes/dbh.inc.php';
+  $id = $_SESSION['userId'];
 
 	if (!isset($_SESSION['userId'])) {
 		header("Location: index");
@@ -35,13 +35,13 @@
           $fileActualExt = $fileExt[1];
           echo "<img class='pfp' src='ProfileImages/profile".$id.".".$fileActualExt."?".mt_rand()."'>";
 
-           echo '<div class="help-me"><form action="includes/delete.inc.php" method="post">
+           echo '<div class="help-me"><form action="Includes/delete.inc.php" method="post">
   <button name="delete" type="submit" class="delete">Delete Profile Image</button>
   </form></div>';
         } else {
           echo "<img class='pfp' src='images/user.png'>";
           echo "<br><br>";
-           echo '<form action="includes/upload.inc.php" method="POST" enctype="multipart/form-data">
+           echo '<form action="Includes/upload.inc.php" method="POST" enctype="multipart/form-data">
     <div class="br">
     <label for="files" class="btn"><b>Select an Image</b></label>
     </div>

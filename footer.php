@@ -6,8 +6,8 @@
   } else {
     ?>
 <footer>
-    <p>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from
-        <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    <p>Icons made by <a href="https://www.flaticon.com/authors/roundicons" target="_blank" title="Roundicons">Roundicons</a> from
+        <a href="https://www.flaticon.com/" target="_blank" title="Flaticon"> www.flaticon.com</a>
     </p>
 </footer>
 <?php
