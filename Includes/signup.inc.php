@@ -163,11 +163,7 @@ function checkKeys($conn, $randStr) {
 }
 
 function generateKey($conn) {
-  //$str = str_shuffle("1234567890ABCDEFG$-_$-_HIJKLMNOPQRSTUVWXYZabcdefgh$-_$-_ijklmnopqrstuvwxyz1234567890ABCDEF$-_$-_GHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz$-_$-_");
-  $keyLengs = array(12, 15, 16, 20);
-  $keylen = $keyLengs[rand(0,3)];
-  $str = md5(rand());
-  $randStr = substr($str, 0, $keylen);
+  $randStr = gen_uuid();
 
   $checkKeys = checkKeys($conn, $randStr);
 
@@ -177,4 +173,14 @@ function generateKey($conn) {
   }
 
   return $randStr;
+}
+
+function gen_uuid() {
+  return sprintf( '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+      mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff ),
+      mt_rand( 0, 0xffff ),
+      mt_rand( 0, 0x0fff ) | 0x4000,
+      mt_rand( 0, 0x3fff ) | 0x8000,
+      mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff )
+  );
 }

@@ -29,11 +29,11 @@
       $resultImg = mysqli_query($conn, $sqlImg); 
       $rowImg = mysqli_fetch_assoc($resultImg);
         if ($rowImg['status'] == 1) {
-          $filename = "ProfileImages/profile".$id."*";
+          $filename = "ProfileImages/".$id."*";
           $fileinfo = glob($filename);
           $fileExt = explode(".", $fileinfo[0]);
           $fileActualExt = $fileExt[1];
-          echo "<img class='pfp' src='ProfileImages/profile".$id.".".$fileActualExt."?".mt_rand()."'>";
+          echo "<img class='pfp' src='ProfileImages/".$id.".".$fileActualExt."?".mt_rand()."'>";
 
            echo '<div class="help-me"><form action="Includes/delete.inc.php" method="post">
   <button name="delete" type="submit" class="delete">Delete Profile Image</button>

@@ -4,7 +4,6 @@ include_once 'dbh.inc.php';
 
 if (isset($_POST['delete'])) {
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "loginsystem");
 $id = $_SESSION['userId'];
 
 if (isset($_SESSION['userId'])) {
@@ -20,7 +19,7 @@ $fileinfo = glob($filename);
 $fileExt = explode(".", $fileinfo[0]);
 $fileActualExt = $fileExt[3];
 
-$file = "../ProfileImages/".$id."."."$fileActualExt";
+$file = "../ProfileImages/".$id.".".$fileActualExt;
 
 if (!unlink($file)) {
     echo "File was not deleted";

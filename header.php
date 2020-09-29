@@ -11,7 +11,7 @@
     //header("Location: index");
   } else {//*/
     ?>
-<nav>
+<nav id=nav>
     <?php 
 	if (isset($_SESSION['userUid'])) {
       echo '<form action="Includes/logout.inc.php" method="POST">';
@@ -37,15 +37,16 @@
           $fileinfo = glob($filename);
           $fileExt = explode(".", $fileinfo[0]);
           $fileActualExt = $fileExt[1];
+          $img = "src=ProfileImages/".$id.".".$fileActualExt."?". mt_rand();
           echo "  <img class='pfp' src='ProfileImages/".$id.".".$fileActualExt."?". mt_rand()."'>";
-          echo "<h3>". $_SESSION['userName']. "</h3>";
+          echo "<h3 id=h3>". $_SESSION['userName']. "</h3>";
           echo '<form action="Includes/delete.inc.php" method="post">
         <button name="delete" type="submit" class="upload">Delete Profile Image</button>
       </form>';
         } else {
           echo '<button class="upload" type="button"><a href="upload">Upload A Profile Picture</a></button>';
-          echo "<img class='pfp' src='images/user.png'>"; 
-          echo "<h3>". $_SESSION['userName']. "</h3>";
+          echo "<img class='pfp' src='/images/user.png'>"; 
+          echo "<h3 id=h3>". $_SESSION['userName']. "</h3>";
         }
     }
         echo "</div>";
